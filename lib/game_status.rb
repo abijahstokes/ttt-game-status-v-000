@@ -30,17 +30,16 @@ def draw?(board)
   end
 end
 
-def over?
-  if draw?(board) == false || full?(board) == false || won?(board) == false
-    return true
-  end
-end
-
-#create winner method
-def winner
-  if WIN_COMBINATIONS.detect {|won| board(index) == "X" || "O"}
+def over?(board)
+  if draw?(board) == true || won?(board) || full?(board)
     return true
   else
     return false
+  end
+end
+
+def winner(board)
+  if WIN_COMBINATIONS(board) == "X" || "O"
+    return true
   end
 end
