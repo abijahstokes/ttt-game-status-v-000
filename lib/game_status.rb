@@ -40,6 +40,7 @@ end
 
 def winner(board)
   if winning_combo = won?(board)
+    binding.pry
     board[winning_combo.first]
   end
 end
