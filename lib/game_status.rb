@@ -39,7 +39,7 @@ def over?(board)
 end
 
 def winner(board)
-  if WIN_COMBINATIONS(board) == "X" || "O"
+  if WIN_COMBINATIONS == "X" || "O"
     return true
   end
 end
